@@ -1,0 +1,113 @@
+
+@import 'config';
+@import 'button';
+@import 'utils';
+// *    Importacion de modulos ↑ 
+
+
+// *    Para compilar en comando haremos lo siguiente
+// *    1.Instalar las extenciones
+// *    2.Ir a configuracion y busar sass
+// *    3.Indicar donde queremos compilar nuestro proyecto 
+
+
+
+
+
+
+
+
+// *    Aqui antes estaban los estilos boton
+
+
+* {
+    @include reset-pm();
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $primary-color;
+    font-family     : Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+a {
+    color          : $secondary-color;
+    text-decoration: none;
+}
+
+h2 {
+    font-weight: bold;
+    font-size  : size(6);
+}
+
+h3 {
+    font-weight: bold;
+    font-size  : size(3);
+}
+
+img {
+    filter: drop-shadow(2px 2px 20px rgba(0, 0, 0, 0.5));
+}
+
+.container {
+    background-color: white;
+    margin          : 100px auto;
+    width           : 1280px;
+    padding         : 50px;
+    box-shadow      : 0 0 20px 2px rgba(0, 0, 0, 0.1);
+
+    background-image: url();
+    background-size : 100% 100%;
+}
+
+ul {
+    @include reset-pm();
+    list-style: none;
+    display: flex;
+    gap: 20px;
+
+    li {
+        a{
+            @include btn($terciary-color, $font-color, 'true');
+            
+            // *    Anidacion de elementos
+            &:hover {
+                @include btn($secondary-color, $terciary-color, 'false');
+                box-shadow: $box-shadow;
+            }
+        }
+    }
+}
+
+header {
+    nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+.prices {
+    .prev {
+        font-size: size(2);
+        font-weight: bolder;
+        color: $font-color;
+        text-decoration: line-through;
+    }
+
+    .now {
+        font-size: size(5);
+        font-weight: bolder;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
